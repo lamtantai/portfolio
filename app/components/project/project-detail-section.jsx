@@ -50,10 +50,10 @@ export default function ProjectDetailSection({ project, onClick }) {
       {/* Desktop View: Images */}
       <section className="relative hidden h-[300vh] lg:block" ref={divRef}>
         <div className="sticky top-0 flex h-screen overflow-clip">
-          <div className="relative flex flex-nowrap">
+          <div className="relative flex flex-nowrap items-center gap-x-layout-padding pl-layout-padding">
             {project.images.map((image, index) => (
               <motion.div
-                className="relative w-[75vw]"
+                className="shimmer-bg relative h-[75vh] w-[65vw]"
                 key={index}
                 style={{
                   x,
@@ -63,7 +63,7 @@ export default function ProjectDetailSection({ project, onClick }) {
                   src={image}
                   fill
                   alt="project image"
-                  className="object-cover p-10 pt-section-vertical-padding"
+                  className="object-cover"
                 />
               </motion.div>
             ))}
@@ -79,9 +79,12 @@ export default function ProjectDetailSection({ project, onClick }) {
           </SplitTextAnimated>
         </p>
 
-        <AnimatedInView animate={opacity} delay={2}>
-          <div className="mb-20 mt-6 flex flex-col gap-y-2 text-paragraph-text">
-            <LinkUnderlineStyle href={project.href} label="View live site" />
+        <AnimatedInView animate={opacity} delay={0.8}>
+          <div className="mb-20 mt-6 flex flex-col gap-y-4 text-paragraph-text uppercase">
+            <LinkUnderlineStyle
+              href={project.liveDemo}
+              label="View live site"
+            />
             <LinkUnderlineStyle href={project.repository} label="View code" />
           </div>
 
