@@ -1,14 +1,15 @@
 export const projects = [
   {
     id: "brick",
-    href: "#brick",
+    href: "/project/brick",
     year: 2024,
     name: "Brick",
     type: "Web content",
+    duration: 10,
     shortDescription:
-      "Brick is a simple, responsive eCommerce site with product listings, cart, and checkout.",
+      "Brick is a simple, responsive mockup eCommerce site with product listings, cart, and checkout.",
     description:
-      "Brick is a simple eCommerce website with a responsive design, offering basic features such as product listings, a shopping cart, a simulated checkout process.",
+      "Brick is a simple mockup eCommerce website with a responsive design, offering basic features such as product listings, a shopping cart, a simulated checkout process.",
     techs: ["React", "Redux", "Next.js", "Tailwind CSS", "Framer Motion"],
     mockup: "/images/projects/brick/mockup.png",
     thumbnail: "/images/projects/brick/thumbnail.png",
@@ -23,10 +24,11 @@ export const projects = [
 
   {
     id: "arcane",
-    href: "#arcane",
+    href: "/project/arcane",
     year: 2024,
     name: "Arcane",
     type: "Web content",
+    duration: 5,
     shortDescription:
       "Arcane 2 is a landing page inspired by Arcane's Season 2 announcement and website design.",
     description:
@@ -49,10 +51,11 @@ export const projects = [
 
   {
     id: "mate",
-    href: "#mate",
+    href: "/project/mate",
     year: 2024,
     name: "Mate",
     type: "Web content",
+    duration: 14,
     shortDescription:
       "Mate is my first real-world project, showcasing my self-taught Web content skills.",
     description:

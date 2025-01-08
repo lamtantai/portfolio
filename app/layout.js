@@ -1,5 +1,9 @@
 import localFont from "next/font/local";
 import "./globals.css";
+import SmoothScroll from "./components/smooth-scroll";
+import Header from "./components/header";
+import ContactSection from "./components/contact-section";
+import Footer from "./components/footer";
 
 const neue = localFont({
   src: "./fonts/PPNeueMontreal-Medium.woff2",
@@ -15,7 +19,13 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={`${neue.variable} font-neue antialiased`}>
-        {children}
+        <SmoothScroll>
+          <main className="px-layout-padding">
+            <Header />
+
+            {children}
+          </main>
+        </SmoothScroll>
       </body>
     </html>
   );

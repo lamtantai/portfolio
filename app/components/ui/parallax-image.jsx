@@ -11,15 +11,15 @@ export default function ParallaxImage({ src }) {
 
   const { scrollYProgress } = useScroll({
     target: ref,
-    offset: ["15% end", "end -100px"],
+    offset: ["start end", "end start"],
   });
 
-  const y = useTransform(scrollYProgress, [0, 1], ["-25%", "25%"]);
+  const y = useTransform(scrollYProgress, [0, 1], ["-25%", "15%"]);
 
   return (
     <div className="shimmer-bg relative h-full w-full overflow-hidden">
       <motion.div
-        className="relative h-[125%] w-full"
+        className="relative h-[135%] w-full"
         ref={ref}
         style={{
           y,

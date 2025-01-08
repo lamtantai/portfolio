@@ -43,7 +43,7 @@ export default function Cursor({ isHovering }) {
           className="pointer-events-none fixed left-0 top-0 z-[400] flex cursor-none items-center justify-center"
           style={{ x, y, width: cursorSize, height: cursorSize }}
         >
-          <span className="rounded-full bg-white p-10 text-center text-paragraph-text text-black">
+          <span className="rounded-full border border-black bg-white p-10 text-center text-paragraph-text text-black">
             See
             <br /> more
           </span>

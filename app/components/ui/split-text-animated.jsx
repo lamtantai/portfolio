@@ -3,7 +3,7 @@
 import React from "react";
 
 import { motion } from "motion/react";
-import { opacity, slideInUp } from "../animations";
+import { opacity, slideInUp } from "@/app/animations";
 
 function splitText(text, type) {
   if (type === "words") return text.split(" ").map((word) => word + "\u00A0");
