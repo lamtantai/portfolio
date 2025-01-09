@@ -1,7 +1,5 @@
 import React from "react";
 
-import Link from "next/link";
-
 import { clippathInUp } from "@/app/animations";
 import AnimatedInView from "@/app/components/ui/animated-in-view";
 
@@ -27,14 +25,6 @@ export default function ProjectInfoTable({ project }) {
               <li key={tech}>{tech}</li>
             ))}
           </ul>
-        </Row>
-
-        <Row title="live">
-          <Link href={project.liveDemo}>View live</Link>
-        </Row>
-
-        <Row title="code">
-          <Link href={project.repository}>View code</Link>
         </Row>
       </div>
     </AnimatedInView>

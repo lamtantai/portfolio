@@ -1,3 +1,5 @@
+"use client";
+
 import Link from "next/link";
 
 import React from "react";
@@ -14,7 +16,7 @@ export default function Header() {
       <div className="flex justify-between pt-8 text-paragraph-text">
         <Link
           href="/"
-          className="transition-transform duration-300 hover:scale-110"
+          className="transition-transform duration-300 hover:scale-110 active:scale-100"
         >
           Tan Tai
         </Link>

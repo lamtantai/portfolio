@@ -2,8 +2,6 @@ import localFont from "next/font/local";
 import "./globals.css";
 import SmoothScroll from "./components/smooth-scroll";
 import Header from "./components/header";
-import ContactSection from "./components/contact-section";
-import Footer from "./components/footer";
 
 const neue = localFont({
   src: "./fonts/PPNeueMontreal-Medium.woff2",

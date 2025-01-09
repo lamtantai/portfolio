@@ -31,6 +31,7 @@ export default function HeroSection() {
             <Image
               src="/my-image-1.jpg"
               alt="my image"
+              sizes="(min-width: 768px) 50vw, 100vw"
               fill
               className="object-cover object-[0%_0%]"
             />

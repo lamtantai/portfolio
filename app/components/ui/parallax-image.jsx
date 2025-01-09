@@ -29,6 +29,7 @@ export default function ParallaxImage({ src }) {
           src={src}
           alt="project image"
           fill
+          sizes="(min-width: 768px) 50vw, 100vw"
           className="object-cover object-center"
         />
       </motion.div>
