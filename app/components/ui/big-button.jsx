@@ -8,7 +8,11 @@ import SplitTextAnimated from "./split-text-animated";
 
 export default function BigButton({ href, text1, text2 }) {
   return (
-    <Link href={href} className="group/button w-fit text-title-base uppercase">
+    <Link
+      target="_blank"
+      href={href}
+      className="group/button w-fit text-title-base uppercase"
+    >
       <div className="relative w-fit overflow-hidden">
         <SplitTextAnimated splitType="chars">{text1}</SplitTextAnimated>
 

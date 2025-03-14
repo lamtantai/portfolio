@@ -6,8 +6,6 @@ import React, { useEffect, useRef } from "react";
 export default function SmoothScroll({ children }) {
   const locomotiveInstance = useRef(null);
 
-  console.log(locomotiveInstance.current);
-
   useEffect(() => {
     if (!locomotiveInstance.current) {
       locomotiveInstance.current = new LocomotiveScroll({

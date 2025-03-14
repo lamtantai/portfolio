@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import React, { useState } from "react";
 
 import { projects } from "@/app/lib/data";
@@ -13,7 +14,6 @@ import ParallaxImage from "../ui/parallax-image";
 import AnimatedInView from "@/app/components/ui/animated-in-view";
 import SectionContainer from "../ui/section-container";
 import SplitTextAnimated from "../ui/split-text-animated";
-import Link from "next/link";
 
 export default function ProjectSection() {
   const [isHovering, setIsHovering] = useState(false);
@@ -29,7 +29,7 @@ export default function ProjectSection() {
                 onMouseEnter={() => setIsHovering(true)}
                 onMouseLeave={() => setIsHovering(false)}
               >
-                <BigButton href={project.href} text1={project.name} />
+                <BigButton href={project.liveDemo} text1={project.name} />
               </h2>
 
               <p className="text-paragraph-text-lg">
@@ -50,18 +50,37 @@ export default function ProjectSection() {
                   ))}
                 </ul>
               </AnimatedInView>
+
+              <div className="flex gap-3">
+                <Link
+                  target="_blank"
+                  href={project.repository}
+                  className="bg-black px-4 py-2 text-title-xs text-white transition-transform duration-300 hover:-translate-y-1 active:translate-y-0"
+                >
+                  View code
+                </Link>
+
+                <Link
+                  target="_blank"
+                  href={project.liveDemo}
+                  className="bg-black px-4 py-2 text-title-xs text-white transition-transform duration-300 hover:-translate-y-1 active:translate-y-0"
+                >
+                  View live
+                </Link>
+              </div>
             </div>
 
             <Link
-              href={project.href}
+              target="_blank"
+              href={project.liveDemo}
               className="relative aspect-[4/5] w-full cursor-pointer lg:h-[130vh]"
               onMouseEnter={() => setIsHovering(true)}
               onMouseLeave={() => setIsHovering(false)}
             >
               <div className="absolute inset-0 z-10 flex items-center justify-center lg:hidden">
                 <span className="rounded-full border border-black bg-white p-10 text-center text-paragraph-text text-black">
-                  See
-                  <br /> more
+                  View
+                  <br /> live
                 </span>
               </div>
 

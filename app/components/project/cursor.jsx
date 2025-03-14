@@ -44,8 +44,8 @@ export default function Cursor({ isHovering }) {
           style={{ x, y, width: cursorSize, height: cursorSize }}
         >
           <span className="rounded-full border border-black bg-white p-10 text-center text-paragraph-text text-black">
-            See
-            <br /> more
+            View
+            <br /> live
           </span>
         </motion.div>
       )}
